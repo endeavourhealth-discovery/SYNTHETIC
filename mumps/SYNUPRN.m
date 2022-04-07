@@ -4,6 +4,8 @@ SYNUPRN ; ; 4/7/22 1:15pm
  new a,r,c,stop,tmp,i,pmid,d1,ralf,status,m,matchdate
  new algversion
  
+ if '$data(^UPRN("U")) W !,"UPRN globals do not exist, exiting" quit
+ 
  set id="",zd=$char(9),c=1,stop=0,pmid=1
  set m=$$HD^STDDATE(+$H)
  set matchdate=$p(m,".",3)_"-"_$p(m,".",2)_"-"_$p(m,".",1)
