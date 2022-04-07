@@ -195,7 +195,8 @@ RPRACT() ;
  
 DOB2  ; loop down ^COHORT insead of ^B
  new nor,rec,zage,sex,dob,c
- K ^ZTDOB,^T
+ ;K ^ZTDOB,^T
+ K ^T
  S nor="",c=1
  F  S nor=$O(^COHORT(nor)) Q:nor=""  DO
  .S rec=^(nor)
@@ -219,9 +220,11 @@ GETETH() ;
 GETADD() ;
  new c,rec,add1,add2,add3,add4,city,post,add
  
- S c=$O(^HULL(""),-1)
- S c=$R(c) I c=0 S c=1
- S rec=^HULL(c)
+ ;S c=$O(^HULL(""),-1)
+ set c=$order(^WALES(""),-1)
+ S c=$R(c)+1 ; I c=0 S c=1
+ ;S rec=^HULL(c)
+ S rec=^WALES(c)
  S add1=$P(rec,"~",1)
  I $P(rec,"~",1)="" S add1=$P(rec,"~",3)
  I add1="" S add1=$P(rec,"~",2)

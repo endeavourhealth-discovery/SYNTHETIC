@@ -26,7 +26,7 @@ SYNSYLVIA5 ; ; 3/10/22 3:41pm
  .kill ^TALLERGY
  .F zzi=1:1:+zztot do
  ..kill data
- ..D PRACT^SYLVIA2(orgid,.data)
+ ..D PRACT^SYNSYLVIA2(orgid,.data)
  ..S practid=$get(data(1))
  ..S zzrole=$get(data(2))
  ..S cdate=$$REGDATE^SYNSYLVIA1(dob) ; clinicaleffectivedate
