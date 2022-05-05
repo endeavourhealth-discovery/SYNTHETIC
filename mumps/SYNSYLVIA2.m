@@ -142,7 +142,8 @@ PRACT(ORG,DATA) ; RANDOM PRACTITIONER (FOR ORGANIZATION)
  N REC,D,ID,C
  S D=$C(9)
  S C=$O(^P(ORG,""),-1)
- S R=$R(C)+1
+ S R=$R(C)
+ I R=0 S R=1
  S REC=^P(ORG,R)
  S ID=$P(REC,D,1)
  S ROLECODE=$P(REC,D,4)
@@ -166,7 +167,7 @@ R100() ;
  S R=$R(100)
  I R=0 S R=1
  QUIT R
-
+ 
 HOSPASSOCS ;
  new r
  K ^A

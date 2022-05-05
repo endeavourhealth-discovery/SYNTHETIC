@@ -37,7 +37,7 @@ BP ;
  if in'="" do END(x,in,zzsys,zzdia)
  
  quit
-
+ 
 END(x,in,zzsys,zzdia) ;
  new sql
  

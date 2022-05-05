@@ -89,7 +89,7 @@ TORG ;
  .S c=$I(c)
  .QUIT
  QUIT
-
+ 
 HOSPSTAFF ;
  new d,lastname,r,firstname,rolecode,role,sex,c
  
@@ -182,7 +182,8 @@ GETFNM(sex) ;
 ORG() ; RANDOM GP SURGERY ORGANIZATION_ID
  new x,r
  S x=$O(^TORG(""),-1)
- S r=$R(x)+1
+ S r=$R(x)
+ if r=0 set r=1
  S r=^TORG(r)
  QUIT r
  

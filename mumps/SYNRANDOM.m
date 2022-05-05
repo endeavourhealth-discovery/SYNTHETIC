@@ -146,7 +146,7 @@ DOB2(age) ; performance improvement ?
  ;I +z1=0 S z1=1
  S d=$piece(T2(z1),"~",1)
  quit d
-
+ 
 TIME() ;
  N I,C,R
  K ^TIME
